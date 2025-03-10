@@ -351,3 +351,13 @@ def flColorHexToNearestApcIndex(colorHex):
     fl_rgb = utils.ColorToRGB(colorHex)
     apc_rgb = closestApcColor(fl_rgb)
     return apc_rgb[0] # index of APC_COLOR
+
+
+def OnProjectLoad():
+    global zone_offset_x
+    global zone_offset_y
+
+    zone_offset_x = 0
+    zone_offset_y = 0
+
+    updateLights()
